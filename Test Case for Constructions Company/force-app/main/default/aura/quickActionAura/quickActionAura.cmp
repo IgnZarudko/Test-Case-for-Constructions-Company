@@ -1,0 +1,3 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:lightningQuickAction,force:hasRecordId" access="global">
+    <c:proposalCreation recordId="{!v.recordId}"></c:proposalCreation>
+</aura:component>	

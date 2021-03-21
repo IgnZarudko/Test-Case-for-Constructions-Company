@@ -1,0 +1,18 @@
+<template>
+    <template if:true={isContactInputActive}>
+        <c-proposal-contacts onchangeclient={handleChangeClient} 
+                            onchangeagent={handleChangeAgent} 
+                            onnext={handleNext}
+                            clientcontact={clientContact}
+                            agentcontact={agentContact}>
+                        </c-proposal-contacts>
+    </template>
+    <template if:false={isContactInputActive}>
+        <c-property-table onchange={handlePropertyChange} 
+                            onback={handleBack} 
+                            onsave={handleSave} 
+                            selectedpropertyid={propertyId}>
+                        </c-property-table>
+    </template>   
+    
+</template>
