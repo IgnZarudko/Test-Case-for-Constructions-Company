@@ -10,12 +10,10 @@ export default class ProposalCreation extends LightningElement {
 
     handleChangeClient(event) {
         this.clientContact = event.detail.clientcontact;
-        console.log(this.clientContact);
     }
 
     handleChangeAgent(event) {
         this.agentContact = event.detail.agentcontact;
-        console.log(this.agentContact);
     }
 
     handleNext() {
@@ -31,12 +29,6 @@ export default class ProposalCreation extends LightningElement {
     }
 
     handleSave() {
-        console.log("saving: ");
-        console.log("client contact Id: " + this.clientContact);
-        console.log("agent contact Id: " + this.agentContact);
-        console.log("property Id: " + this.propertyId);
-        console.log("opportunity Id: " + this.recordId);
-
         saveProposal({
             clientContactId : this.clientContact,
             agentContactId : this.agentContact,
@@ -46,6 +38,9 @@ export default class ProposalCreation extends LightningElement {
         .then(result => {
             console.log(JSON.stringify(result));
             console.log("saved successfully");
+            
+            const closeQA = new CustomEvent('close');
+            this.dispatchEvent(closeQA);
         })
         .catch(error => {
             console.log(error);

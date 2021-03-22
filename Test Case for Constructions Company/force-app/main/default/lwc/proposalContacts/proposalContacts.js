@@ -5,8 +5,6 @@ export default class ProposalContacts extends LightningElement {
     @api agentcontact;
 
     handleClientContact(event) {
-        console.log("was : " + this.clientcontact);
-
         this.clientcontact = event.detail.value[0];
 
         const customEvent = new CustomEvent('changeclient', {
@@ -19,8 +17,6 @@ export default class ProposalContacts extends LightningElement {
     }
 
     handleAgentContact(event) {
-        console.log("was : " + this.agentcontact);
-
         this.agentcontact = event.detail.value[0];
 
         const customEvent = new CustomEvent('changeagent', {
