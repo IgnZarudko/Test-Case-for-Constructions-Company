@@ -1,5 +1,5 @@
 import { api, LightningElement, track } from 'lwc';
-import { FlowAttributeChangeEvent, FlowNavigationNextEvent } from 'lightning/flowSupport';
+import { FlowAttributeChangeEvent } from 'lightning/flowSupport';
 
 export default class Flow_ContactAndDate extends LightningElement {
     @track _contact;
