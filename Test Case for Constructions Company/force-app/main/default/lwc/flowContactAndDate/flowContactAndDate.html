@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Contact and Date" icon-name="custom:custom14">
+        <lightning-record-edit-form object-api-name="Property_Visit__c">
+            <div class="slds-m-around_medium">
+                <lightning-input-field field-name="Client_Contact__c" value={_contact} required="true" onchange={handleContact} ></lightning-input-field>
+                <lightning-input-field field-name="Date__c" value={_date} onchange={handleDate}></lightning-input-field>
+            </div>
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>
