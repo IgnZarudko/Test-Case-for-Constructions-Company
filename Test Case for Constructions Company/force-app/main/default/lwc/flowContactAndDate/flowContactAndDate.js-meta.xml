@@ -9,7 +9,7 @@
 
     <targetConfigs>
         <targetConfig targets="lightning__FlowScreen">
-            <property name="contact" label="Contact" type="@salesforce/schema/Contact"/>
+            <property name="contact" label="Contact" type="String"/>
             <property name="date" label="Date" type="Date"/>
         </targetConfig>
     </targetConfigs>

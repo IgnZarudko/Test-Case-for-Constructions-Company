@@ -39,7 +39,7 @@ export default class FlowSelectVisitedProperties extends LightningElement {
 
     @api
     validate() {
-        if(this._selectedProperties.length > 0) {
+        if(this.selectedProperties.length > 0) {
             return { isValid: true };
         } 
         return {
